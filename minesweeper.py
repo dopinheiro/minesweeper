@@ -19,7 +19,7 @@ def popula_tabuleiro(tabuleiro):
 				tabuleiro[x][y] = mina
 				break
 
-	for linha in range(len(tabuleiro)):
+	for linha in range(len(tabuleiro)):  #TODO: estudar maneira de reduzir a quantidade de condicionais
 		for item in range(len(tabuleiro[linha])):
 			dica = 0
 			try:
@@ -141,7 +141,7 @@ def imprime_tabuleiro(tabuleiro):
 	for item in tabuleiro:
 		print(" ".join(item))
 	input()
-	os.system('clear')
+	os.system('clear') # Ao rodar em sistema Windows, trocar o 'clear' por 'cls'
 
 mina = '\033[1;31m■\033[0;0m'
 
